@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (count >= 8) {
                 Intent myIntent = new Intent(this, winnerScreen.class);
-                myIntent.putExtra("winner","Match Draw");
+                myIntent.putExtra("winner", "Match Draw");
                 startActivity(myIntent);
             } else
                 Toast.makeText(this, "Dimag hai to use karo ,\n Dusre ki jagah pe na khelo,\n Mind itt !!!!", Toast.LENGTH_LONG).show();
