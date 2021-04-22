@@ -57,13 +57,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void turn(int n) {
-        if (board[n] == '.' && count < 9) {
+        if (board[n] == '.' && count < 8) {
             board[n] = player();
             setDisplay(n);
             count++;
             check();
-        } else
-            Toast.makeText(this, "Dimag hai to use karo ,\n Dusre ki jagah pe na khelo,\n Aur game khatm ho to band krke chalu karo.\n Mind itt !!!!", Toast.LENGTH_LONG).show();
+        } else {
+            if (count >= 8) {
+                Intent myIntent = new Intent(this, winnerScreen.class);
+                myIntent.putExtra("winner","Match Draw");
+                startActivity(myIntent);
+            } else
+                Toast.makeText(this, "Dimag hai to use karo ,\n Dusre ki jagah pe na khelo,\n Mind itt !!!!", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     public void check() {
