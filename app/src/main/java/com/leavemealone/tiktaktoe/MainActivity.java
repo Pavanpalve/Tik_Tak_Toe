@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     int count = 0;
     char[] board = {'.', '.', '.', '.', '.', '.', '.', '.', '.'};
-
+	// this is comment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
